@@ -32,10 +32,10 @@ To test the wildcard attack, I first checked the ownership of the tar file in th
 <img src="https://i.imgur.com/x9qEli5.png" height="80%" width="90%" alt=""/>
 <br />
 <br />
-<h2> Step 4:  </h2>
-
+<h2> Step 4: Downloading Wildcard Attack File </h2>
+Before downloading the <b>wildpwn.py</b> file, I navigated to the <b>ExploitTar</b> directory, which was designated to contain the payload file. I confirmed the contents of the directory using the <b>ls</b> command. After confirming the directory structure, I proceeded to download the file using the <b>wget</b> command. Once the download was complete, I listed the directory contents again to ensure the file had been successfully downloaded.. <br />
+ <br />
 <p align="center">
-
 <img src="https://i.imgur.com/HJF9Kbs.png" height="80%" width="90%" alt=""/>
    <br />
       <br />
@@ -46,8 +46,9 @@ To test the wildcard attack, I first checked the ownership of the tar file in th
    <br />
       <br />
   
-<h2> Step 5:  </h2>
-
+<h2> Step 5: Running the Wildcard Attack File Using 'tar' </h2>
+After downloading the file, I executed the <b>wildpwn.py</b> script to extract its contents into the <b>ExploitTar</b> directory. To verify the script ran successfully, I used the <b>ls -lat</b> command to list all files, including hidden ones, and confirm the presence of any new files or directories created by the script. <br />
+<br />
 <p align="center">
 <img src="https://i.imgur.com/0I2Ypo4.png" height="80%" width="90%" alt=""/>
      <br />
@@ -56,16 +57,18 @@ To test the wildcard attack, I first checked the ownership of the tar file in th
    <br />
       <br />
   
-<h2> Step 6:  </h2>
-   <br />
-
+<h2> Step 6: Executing Payload File </h2>
+With the payload file successfully extracted, I navigated into the <b>.cache</b> directory to locate the <b>.cachefile</b> script. Once inside the directory, I executed the script to escalate privileges, granting the user root access. <br />
+<br />
 <p align="center">
 <img src="https://i.imgur.com/KsmXzLT.png" height="80%" width="90%" alt=""/>
+<br />
+<br />
   
-<h2> Step 7:  </h2>
-
+<h2> Step 7: Escalating Privileges </h2>
+After obtaining root privileges, I escalated my user permissions by editing the <b>sudoers</b> file, allowing myself root access without requiring a password for sudo commands. To confirm the changes, I verified my sudo privileges by executing <b>sudo -l</b>. <br />
+<br />
 <p align="center">
-
 <img src="https://i.imgur.com/SO2t8YO.png" height="80%" width="90%" alt=""/>
    <br />
       <br />
@@ -79,15 +82,18 @@ To test the wildcard attack, I first checked the ownership of the tar file in th
    <br />
       <br />
   
-<h2> Step 8:  </h2>
-
+<h2> Step 8: Successful Exploitation of 'tar' </h2>
+To finalize my verification of the privilege escalation, I accessed the <b>/etc/shadow</b> file using a <b>sudo cat</b> command. The system did not prompt me for a password, confirming that the escalation was successful.    <br />
+<br />
 <p align="center">
 <img src="https://i.imgur.com/xbmB9Ee.png" height="80%" width="90%" alt=""/>
    <br />
       <br />
   
-<h2> Step 9:  </h2>
-
+<h2> Step 9: Deleting Evidence </h2>
+To cover my tracks, I deleted the ExploitTar directory using the sudo rm -r command. This ensured that all associated files, including hidden directories and files, were completely removed from the system, leaving no trace of the exploit.
+<br />
+<br />
 <p align="center">
 <img src="https://i.imgur.com/JInSAyE.png" height="80%" width="90%" alt=""/>
    <br />
