@@ -1,12 +1,16 @@
 # Backup Privilege Escalation Testing
 
-<h2> Lab </h2>
+<h2> Overview </h2>
 
-In this lab, I acted as a penetration tester tasked with identifying vulnerabilities in a target system's backup procedures. Key activities included:<br/>
+This lab focused on penetration testing to uncover vulnerabilities in a target system's backup procedures. I conducted privilege escalation tests and vulnerability assessments to identify security gaps and potential exploits.<br />
 
--  <b>Privilege Escalation Testing</b>: Used the wildpwn.py tool to verify whether the system was vulnerable to privilege escalation attacks within its backup configuration.<br/>
--  <b>Vulnerability Assessment</b>: Analyzed the system’s current configuration to identify potential weaknesses that could be exploited for unauthorized access or control.<br/>
--  <b>Url</b>: https://raw.githubusercontent.com/localh0t/wildpwn/master/wildpwn.py<br/>
+<h2>Technical Skills</h2>
+✅ Privilege Escalation Testing <br />
+✅ Vulnerability Assessment & Exploitation<br />
+✅ Security Misconfiguration Analysis<br />
+✅ Penetration Testing Tools (wildpwn.py)<br />
+✅ Backup Security Evaluation<br />
+✅ Ethical Hacking & Risk Mitigation<br />
 
 <h2>  Login as User Jane and verifying Sudo Rights for User jane </h2>
 I first logged in as Jane using the <b>su 'User'</b> command, then verified that I had successfully switched users with the <b>whoami</b> command. Additionally, using the <b>sudo -l</b> command, I confirmed that Jane had no sudo privileges, which was essential for testing the exploitation process.
